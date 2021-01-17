@@ -1,0 +1,91 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body {
+	background-color: #6FC49F;
+}
+section {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+}
+section h2 {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	line-height: 100vh;
+	font-size: 10vw;
+	color: #fff;
+	font-weight: 1;
+}
+.banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+}
+.banner .blocks {
+	position: relative;
+	display: block;
+	height: 5vh;
+	width: 5vw;
+	animation: animate 2s ease-in-out forwards;
+	animation-delay: 1s;
+}
+@keyframes animate {
+	0% {
+		transform: translateZ(2000px);
+		background: url(../img/girl-1562025.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+	}
+	100% {
+		transform: translateZ(0px);
+		background: url(../img/girl-1562025.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		border: 1px solid rgba(0,0,0,.1);
+		box-shadow: 0 2px 5px rgba(0,0,0,0);
+	}
+}
+section.active .banner .blocks {
+		animation: animateTwo 2s ease-in-out forwards;
+		background: url(../img/girl-1562025.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+		border: 1px solid rgba(0,0,0,.1);
+}
+@keyframes animateTwo {
+	0% {
+		transform: translateZ(0px);
+		background: url(../img/girl-1562025.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+	}
+	100% {
+		transform: translateZ(2000px);
+		background: url(../img/girl-1562025.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center;
+		border: 1px solid rgba(0,0,0,0.1);
+		box-shadow: 0 5px 15px rgba(0,0,0,0);
+	}
+}
